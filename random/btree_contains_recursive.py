@@ -16,3 +16,10 @@ a.right = c
 b.left = d
 b.right = e
 c.right = f
+
+def LookingFor(root, target):
+    if root == None: return False
+    if root.value == target: return True
+    return (LookingFor(root.left, target) or LookingFor(root.right, target))
+
+print(LookingFor(a,'k'))
