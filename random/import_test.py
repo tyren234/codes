@@ -1,3 +1,3 @@
-import stack_operations
+from stack_operations import stack_operationss
 
-stack_operations("(2 + (5 - 3))")
+print(stack_operationss("(2 + (5 - 3))"))
