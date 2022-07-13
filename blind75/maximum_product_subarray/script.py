@@ -9,9 +9,9 @@ def maximum_product_subarray(arr : list[int]) -> int:
         cmin = min(tmp, cmin * arr[i], arr[i])
         current = max(current, cmax)
 
-    return cmax
+    return current
 
-print(maximum_product_subarray([1,2,3]))
-print(maximum_product_subarray([-1,-2,-3]))
-print(maximum_product_subarray([-1,-2,-3,-4, 0, 15, 3]))
+#print(maximum_product_subarray([2,3,-2,4]))
+#print(maximum_product_subarray([-1,-2,-3]))
+#print(maximum_product_subarray([-1,-2,-3,-4, 0, 15, 3]))
 
