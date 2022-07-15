@@ -3,10 +3,10 @@ This is my compedium of scripts I wrote in python. It was years ago when I shoul
 So here it is - all python scripts I write not for any kind of project, but just to see how something works.
 
 ## Directories
-Directories hold content appropirate to their name.
+#### Directories hold content appropirate to their name.
 
-Blind75 - scripts, answers to problems from leetcode blind 75
-Random - all the rest
+*blind75* - scripts, answers to problems from leetcode blind 75  
+*random* - all the rest
 
 ## Contact
 In case of something beeing wrong feel free to open an issue or make changes and a pull request.
