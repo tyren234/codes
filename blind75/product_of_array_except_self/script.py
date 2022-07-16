@@ -1,6 +1,3 @@
-from audioop import mul
-
-
 nums = [-1,1,0,-3,3]
 out = [1]*len(nums)
 out2 = [1]*len(nums)

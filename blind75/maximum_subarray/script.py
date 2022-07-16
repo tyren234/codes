@@ -13,4 +13,4 @@ def maximum_subarray(arr : list[int]) -> int:
             sum = 0
     return cmax
             
-print(maximum_subarray([-2,1,-3,4,-1,2,1,-5,4]))
+# print(maximum_subarray([-2,1,-3,4,-1,2,1,-5,4]))

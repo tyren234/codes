@@ -44,4 +44,4 @@ def min_in_rotated_sorted_array (arr : list[int]) -> int:
 # 1,2,3,4,5,6,7,0
 # 0,1,2,3,4,5,6,7
 
-print(min_in_rotated_sorted_array([11,13,57,9458,10000,2,5,8]))
+# print(min_in_rotated_sorted_array([11,13,57,9458,10000,2,5,8]))
