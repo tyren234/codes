@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/submissions/
 def two_sum_II (arr : list[int], target : int) -> tuple:
     l = 0
     r = len(arr) - 1
