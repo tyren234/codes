@@ -1,5 +1,7 @@
 import math
-
+# I honestly can't describe how this works because I would take me too long.
+# There is a saying that you only really understand something when you can teach a baby do it...
+# According to this saying I don't uderstand it one bit.
 def coinChange(coins: list[int], amount: int) -> int:
     results = [0]
     for camount in range (1,amount+1):
