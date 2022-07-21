@@ -1,16 +1,15 @@
-from sympy import true
-
+import math
 
 def coinChange(coins: list[int], amount: int) -> int:
-    coins.sort(reverse=True)
-    count = 0
-    i = 0
-    while amount > 0 and i < len(coins):
-        count += amount // coins[i]
-        amount = amount % coins[i]
-        i += 1
-    if amount != 0:
-        return -1
-    return count
+    results = [0]
+    for camount in range (1,amount+1):
+        cmin = math.inf
+        for coin in coins:
+            if coin > camount:  continue
+            temp = 1 + results[camount-coin]
+            cmin = min(temp,cmin)
+        results.append(cmin)
+    if results[-1] == math.inf: return -1
+    return results[-1]
 
-print(coinChange([3,2,1], 15))
+print(coinChange([1,3,4,5], 7))
