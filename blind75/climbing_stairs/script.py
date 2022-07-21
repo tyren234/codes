@@ -21,5 +21,12 @@
 # | 8  | | 5  | | 3  | | 2  | | 1  | | 1  |
 # ====== ====== ====== ====== ====== ======
 # Furthermore we can even get rid of the array and store only two previous elements and such solution is written below.
+
+
 def climbing_stairs(n:int)->int:
-    pass
+    a, b = 1, 1
+    for i in range(n-1):
+        temp = a
+        a = a + b
+        b = temp
+    return a
