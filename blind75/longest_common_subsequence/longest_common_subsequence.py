@@ -2,18 +2,14 @@ from numpy import size
 
 
 def longest_common_subsequence(text1 : str, text2 : str) -> str:
-    sizes = dict()
-    for i in reversed(range(len(text2))):
-        for j in range(len(text1)):
-            if text1[j] == text2[i]:
-                cmax = 1
-                for k in range(j+1, len(text1)):
-                    if sizes.get(text1[k]) != None and sizes.get(text1[k]) + 1 > cmax:
-                        cmax = 1 + sizes[text1[k]]
-                if sizes.get(text2[i]) == None or sizes.get(text2[i]) < cmax:
-                    sizes[text2[i]] = cmax
-    if not sizes: return 0
-    return max(sizes.values())
+    sizes = [[0 for j in range(len(text2) + 1)] for i in range(len(text1) + 1)]
+    for i in reversed(range(len(text1))):
+        for j in reversed(range(len(text2))):
+            if text1[i] == text2[j]:
+                sizes[i][j] = 1 + sizes[i+1][j+1]
+            else:
+                sizes[i][j] = max(sizes[i][j+1], sizes[i+1][j])
+    return sizes[0][0]
         
 
 # print(longest_common_subsequence("bcade", "acekf")) # 2
