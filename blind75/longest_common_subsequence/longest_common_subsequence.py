@@ -13,5 +13,21 @@ def longest_common_subsequence(text1 : str, text2 : str) -> str:
         
 
 # print(longest_common_subsequence("bcade", "acekf")) # 2
-print(longest_common_subsequence("abcba", "abcbcba")) # 5
-    
+# print(longest_common_subsequence("abcba", "abcbcba")) # 5
+#    a  b  c  b  a
+#  ======================
+#a |  |  |  |  |  |  |  |
+#  ======================
+#b |  |  |  |  |  |  |  |
+#  ======================
+#c |  |  |  |  |  |  |  |
+#  ======================
+#b |  |  |  |  |  |  |  |
+#  ======================
+#c |  |  |  |  |  |  |  |
+#  ======================
+#b |  |  |  |  |  |  |  |
+#  ======================
+#a |  |  |  |  |  |  |  |
+#  ======================
+#  |  |  |  |  |  |  |  |
