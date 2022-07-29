@@ -174,5 +174,53 @@ Ten znak to:
 ```
     \0
 ```
-Tabice w pewnym sensie są wskaźnikami, a w pewnym sensie nie.  
-Zawsze kiedy są przekazywane do funkcji to są przekazywane jako wskaźniki.
+Tablice w pewnym sensie są wskaźnikami, a w pewnym sensie nie.  
+Zawsze kiedy są przekazywane do funkcji to są przekazywane jako wskaźniki.  
+
+Jest funkcja `sizeof()`, która zwraca **wielkość (rozmiar w pamięci)** tablicy.
+
+**Długość** tablicy można policzyć przez podzielenie sizeof() tablicy przez sizeof() jednego elementu.
+
+**Do zmiennej tablicowej nie można przypisać adresu innej zmiennej**  
+
+Poruszanie się po tablicy wygląda w ten sposób, że pobierany jest wskaźnik na pierwszy element i jest on inkrementowany odpowiednią liczbę razy.  
+
+## 3
+### **Różnice arr vs pointer**
+
+array zawsze ma jeden więcej rozmiaru, bo musi mieć ten znak końcowy.
+
+Jeżeli sprawdzić rozmiar wskaźnika to będzie miał tyle ile ma rzeczy tablica. Jeżeli tablicy to ma jeden więcej, a nawet dwa, ale nie ogarniam dlaczego - trzeba jeszcze raz obejrzeć.  
+
+---
+
+W tablicy możemy zwyczajnie podmienić wartości pod dowolnym indeksem.  
+
+Modyfikowanie przy wskazaniu jest niemożliwe:
+```cpp
+*(char_ptr+1) = 'b';
+```
+Ten kod wywali błąd.
+
+---
+
+Trzeciej różnicy nie zdążyłem przeczytać :)
+
+## 4
+### **Strong typed language**
+
+C++ jest silnie ztypizowanym językiem. Kompilacja jest w nim znacznie bardziej skomplikowana niż w językach, które nie zwracają uwagi na typy.  
+
+Wiele problemów można wykryć w czasie kompilacji (statycznie), dzięki czemu nie mogą się wydarzyć w czasie wykonania programu (dynamicznie).  
+
+Jeżeli ktoś uważa, że C++ jest bardzo restrykcyjny jeżeli chodzi o typy, to zaleca się zobaczenie *Rust*, który momentalnie ma poprawić ten pogląd - udowadniając, że C++ prawie nie narzuca na programistę żadnych restrykcji :).
+
+## 5
+### **Konwersja typów**
+
+Type conversion. 
+
+W nowoczesnym C++ używa się `auto`, ale w pewnym momencie zawsze napotyka się na sytuację, w której trzeba mieć dwie zmienne tego samego typu. Stąd konwersja typów.  
+
+Można to robić na sposób `impicit` (jawny) i `explicit` (niejawny). Oczywiście bezpieczniejszy jest jawny (`implicit`). Jeżeli czegoś nie sprecyzujemy to kompilator to sobie zrobi sam i zrobi to najpewniej źle, albo po macoszemu. Najczęściej przy konwersji typów potrzebujemy jednak, żeby być pewnym niektórych rzeczy.  
+
