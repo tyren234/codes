@@ -272,3 +272,49 @@ Jest też coś takiego jak `const_cast` - pozwala zmienić wartość zmiennej k
 ## 7 
 ### **Konwersja niejawna** 
 
+**RTTI** - *run time type identification* o godzinie 18:59 na prezentacji. RTTI to właściwie dwa operatory:
+1. pierwszy chyba typeof
+2. drugi jakiś cast chyba dynamic cast
+
+Castowanie klasy bazowej do klasy dziedziczącej (dziecka) zwróci oczywiście błąd.
+
+Castowanie klasy dziedziczącej (dziecka) do klasy bazowej, działa normalnie.
+
+Nie pamiętam tutaj czy d to był wskaźnik czy nie:
+```cpp
+Derived d;
+Base* b = dynamic_cast<Derived*>(d);
+```
+
+## 8
+### **Reintepret cast**
+`reinterpret_cast` - wszystkie chwyty dozwolone. Można przerzucić to na dowolny typ. Na własną odpowiedzialność 8).  
+
+Fajna rzecz jest taka, że jeżeli castujemy potem z powrotem w to co było ostatnio to dostaniemy starą wartość.
+
+## 9
+### **Przykłady**
+
+```cpp
+float f = 5.15017;
+float *fp = &f;
+
+int i = static_cast<int>(f);
+```
+Nie zdążyłem przeczytać, ale o godzinie 19:08 są przykłady. I rzeczywiście jeżeli chodzi o `reintepret_cast` to zapamiętał wartość `float` nawet po rzutowaniu na `char`.
+
+## 10
+### **Pytania i odpowiedzi**  
+
+1. Pytania będą po angielsku.
+2. Test jest w poniedziałek.
+3. Zazwyczaj test był o 17, wiec pewnie pod wieczór.
+4. Zwykle jest 20 pytań i 30 min.
+5. Test jest wielokrotnego wyboru, ale pytania dotyczą tylko tego co było poruszone i było na slajdach.
+6. Na następny dzień pewnie będą 2-4.08.2022
+7. Nie ma punktów ujemnych.
+8. Na platformie codility. (wym. "codiliti")
+9. Praca jest zdalna ale i fizyczna, więc nie wiadomo.
+10. Może zdarzyć się pytania bez żadnej odpowiedzi.
+11. Nie bać się robić i zadawać pytania - być aktywnym.
+12. Na workshopach lepiej być i ogólnie.
