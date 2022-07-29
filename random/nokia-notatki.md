@@ -4,17 +4,20 @@
 
 C++ ma typy, pozwalają decydować jakie operacje są możliwe na danych zmiennych.
 
+---
 ## 2  
 ### **Bity a bajty.**  
 
 Bity mogą mieć wartość albo 1, albo 0. Natomiast bajt to po prostu 8 bitów.
 
+---
 ## 3
 ### **Int - integer - liczba całkowita**  
 
 Pokrywa liczby z przedziału od -2147483648 do + 2147483647  
 **INTMAX_MAX** podaje maksymalną wielkość inta na naszej maszynie. Różne komputery będą miały różne. Oczywiście można sprecyzować rodzaj inta, np *int16*, *int32*, *int64*.
 
+---
 ## 4  
 ### **Inne typy liczbowe**
 
@@ -30,6 +33,7 @@ Przykłady:
 - *signed 16bit int* jest od -32768 do 32767  
 - *unsigned 16bit int* jest od 0 do 65535  
 
+---
 ## 5
 ### **Overflow i underflow**
 
@@ -40,6 +44,7 @@ To a będzie równe maksymalnej wartości unsigned inta. Licznik się *"przekrę
 *Underflow* jeżeli przeskoczymy od dołu.  
 *Overflow* jeżeli od góry.
 
+---
 ## 6
 ### **Char - podstępny typ numeryczny (znak)**  
 
@@ -49,6 +54,7 @@ Chary w C++ otaczamy pojedynczym apostrofem:
 
 Chary też mogą być signed in unsigned.
 
+---
 ## 7
 ## **Foating numbers - liczby zmiennoprzecinkowe**
 
@@ -62,6 +68,7 @@ Liczby składają się ze *znaku*, *eksponenty* i *mantysy*.
 
 Jeżeli musimy porównać ze sobą dwa floaty to odejmujemy od siebie i porównujemy z **bardzo** niewielką liczbą.
 
+---
 ## 8
 ### **Boolean - prawda/falłsz**  
 
@@ -71,6 +78,7 @@ Co ciekawe nie zajmuje jednego bita tylko więcej, ale nie było powiedziane dla
 
 **SPRAWDZIĆ ^**  void
 
+---
 ## 9
 ## **Wskaźniki! To on!**
 
@@ -88,6 +96,7 @@ std::cout << *pointer;
 ```
 Gwiazdki stawiamy po prostu przy nazwie typu przy inicjalizacji, a przy nazwie zmiennej przy dereferencji.
 
+---
 ## 10
 ### **Referencje**  
 
@@ -118,6 +127,7 @@ Teraz słowo kluczowe ***const***.
 
 Nie będzie można zmieniać jeżeli zainicjujemy coś *const*.
 
+---
 ## 11
 ### **THE VOID** 
 
@@ -165,6 +175,7 @@ int main()
     fc++; 
 }
 ```
+---
 ## 2
 ### **C type arrays**  
 
@@ -185,6 +196,7 @@ Jest funkcja `sizeof()`, która zwraca **wielkość (rozmiar w pamięci)** tabli
 
 Poruszanie się po tablicy wygląda w ten sposób, że pobierany jest wskaźnik na pierwszy element i jest on inkrementowany odpowiednią liczbę razy.  
 
+---
 ## 3
 ### **Różnice arr vs pointer**
 
@@ -206,6 +218,7 @@ Ten kod wywali błąd.
 
 Trzeciej różnicy nie zdążyłem przeczytać :)
 
+---
 ## 4
 ### **Strong typed language**
 
@@ -215,6 +228,7 @@ Wiele problemów można wykryć w czasie kompilacji (statycznie), dzięki czemu 
 
 Jeżeli ktoś uważa, że C++ jest bardzo restrykcyjny jeżeli chodzi o typy, to zaleca się zobaczenie *Rust*, który momentalnie ma poprawić ten pogląd - udowadniając, że C++ prawie nie narzuca na programistę żadnych restrykcji :).
 
+---
 ## 5
 ### **Konwersja typów**
 
@@ -223,4 +237,38 @@ Type conversion.
 W nowoczesnym C++ używa się `auto`, ale w pewnym momencie zawsze napotyka się na sytuację, w której trzeba mieć dwie zmienne tego samego typu. Stąd konwersja typów.  
 
 Można to robić na sposób `impicit` (jawny) i `explicit` (niejawny). Oczywiście bezpieczniejszy jest jawny (`implicit`). Jeżeli czegoś nie sprecyzujemy to kompilator to sobie zrobi sam i zrobi to najpewniej źle, albo po macoszemu. Najczęściej przy konwersji typów potrzebujemy jednak, żeby być pewnym niektórych rzeczy.  
+
+*Implicit type conversion - type "upscaling"* - typy konwertuje się w górę. Np. `bool + int` zamieni `bool` na `int`.  
+(Prawdopodobnie `true` -> 1, `false` -> 0)
+
+Jedyne miejsce gdzie takie dziwne konwersje się dzieją to egzaminy na studia i rozmowy o pracę. Przykład o godzinie 18:41.
+
+
+
+Unia to jest typ, który zawiera jedną wartość, którą można rozumieć na wiele sposobów.
+ ```cpp
+ union u{
+    float f;
+    char c;
+ }
+ ```
+-*Wygląda to niebezpiecznie, ale czy jest to niebezpieczne?*  
+-*Jeszcze jak!*
+
+Często na egzaminach pojawia się pytanie **jak sprawdzić endianowość procesora** i robi się to za pomocą unii. Najczęściej zadawane pytanie egzaminacyjne na świecie.
+
+`Union` to jest `struct`, w którym jest bardzo niewiele miejsca. Taki kontenerek na jeden element.
+
+---
+## 6
+### **Konwersja jawna a.k.a. rzutowanie**  
+
+`static_cast` - pozwala castować i w górę i w dół, ale działa tylko między typami, które są ze sobą kompatybilne.  
+
+Jest też coś takiego jak `const_cast` - pozwala zmienić wartość zmiennej kryjącej się pod constowym wskaźnikiem zmiennej jakimiś wygibasami.  
+
+**TE DWA TRZEBA SOBIE POWTÓRZYĆ ^**
+---
+## 7 
+### **Konwersja niejawna** 
 
