@@ -46,4 +46,13 @@ Wykłady i warsztaty, egzaminy pisemne i egzamin ustny. Trwa 3-3.5 tygodnia. Tro
 
 ## Dane kontaktowe
 
-1. Organizacja: Janusz Jedlinski 781234525 academy.wroclaw@nokia.com
+1. Organizacja: Janusz J.
+
+## Q & A
+
+1. Wszystko jest na teams.
+2. Czy warsztaty są podzielone na grupy? Tak są podzielone na mniejsze grupy.
+3. Czy nagrania wykładów będą dostępne za pośrednictwem MS Teams? Tak.
+4. Przyszłe egzaminy będą jednokrotnego wyboru
+5. Jest 115 osób na każdej z dwóch kategorii. Do następnego etapu przechodzi 60 osób.
+6. Jeżeli nie możemy być na egzaminie to dawać znać Januszowi J. i da się wszystko zmienić.
