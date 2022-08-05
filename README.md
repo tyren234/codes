@@ -6,6 +6,7 @@ So here it is - all python scripts I write not for any kind of project, but just
 #### Directories hold content appropirate to their name.
 
 *blind75* - scripts, answers to problems from leetcode blind 75  
+*nokiaAcademy* - materials regarding Nokia Academy 19
 *random* - all the rest
 
 ## Contact

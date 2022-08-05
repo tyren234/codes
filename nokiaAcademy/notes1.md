@@ -1,3 +1,5 @@
+Materiały z wykładu wstępnego
+
 # Typy w C++ -> są i to jak! (prezentacja 1)
 
 ## 1
