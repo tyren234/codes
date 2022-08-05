@@ -56,3 +56,4 @@ Wykłady i warsztaty, egzaminy pisemne i egzamin ustny. Trwa 3-3.5 tygodnia. Tro
 4. Przyszłe egzaminy będą jednokrotnego wyboru
 5. Jest 115 osób na każdej z dwóch kategorii. Do następnego etapu przechodzi 60 osób.
 6. Jeżeli nie możemy być na egzaminie to dawać znać Januszowi J. i da się wszystko zmienić.
+7. Można zmieniać godziny zajęć po rozmowie z prowadzącym
