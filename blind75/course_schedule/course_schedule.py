@@ -20,6 +20,6 @@ def canFinish(numCourses : 'int', prerequisites : 'list[list[int]]') -> bool:
                 if oneCourse(requirement) == False: return False
             return True
 
-    return oneCourse(0)        
+    return oneCourse(0)
 
 print(canFinish(5,[[0,1],[0,2],[1,3],[1,4],[3,4]]))
