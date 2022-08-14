@@ -9,7 +9,7 @@ def numIslands(grid: 'list[list[str]]') -> int:
 
     rootsList = [i for i in range(rows * columns)]
 
-    def isRoot(nodeId : int, rootsList : 'list[int]'):
+    def isRoot(nodeId : int, rootsList : 'list[int]') -> bool:
         return rootsList[nodeId] == nodeId
     
     def connect(nodeId : int, connectToId : int, rootsList : 'list[int]'):
@@ -26,13 +26,13 @@ def numIslands(grid: 'list[list[str]]') -> int:
             id = r * columns + c
 
             # down check
-            if r != rows - 1 and grid[r + 1][c] == "1" and not connected(id, id + columns, rootsList):
-                if isRoot(id + columns, rootsList): connect(id + columns, id, rootsList)
-                else: connect(rootsList[id], id + columns, rootsList)
+            if r != rows - 1 and grid[r + 1][c] == "1":
+                connect(rootsList[id + columns], rootsList[id], rootsList)
+                #else: connect(rootsList[id], rootsList[id + columns], rootsList)
             # right check
-            if c != columns - 1 and grid[r][c + 1] == "1" and not connected(id, id + 1, rootsList):
-                if isRoot(id + 1, rootsList): connect(id + 1, id, rootsList)
-                else: connect(rootsList[id], id + 1, rootsList)
+            if c != columns - 1 and grid[r][c + 1] == "1":
+                connect(rootsList[id + 1], rootsList[id], rootsList)
+                #else: connect(rootsList[id], rootsList[id + 1], rootsList)
     
     # return rootsList
 
@@ -54,22 +54,23 @@ def numIslands(grid: 'list[list[str]]') -> int:
     
     return numberOfIslands
 
-# print(numIslands([
-# ["1","1","1","1","0"],
-# ["1","1","0","1","0"],
-# ["1","1","0","0","0"],
-# ["0","0","0","0","0"]]))
+print(numIslands([
+["1","1","1","1","0"],
+["1","1","0","1","0"],
+["1","1","0","0","0"],
+["0","0","0","0","0"]]))
 
-# print(numIslands([
-#     ["1","1","1"],
-#     ["0","1","0"],
-#     ["1","1","1"]]))
+print(numIslands([
+    ["1","1","1"],
+    ["0","1","0"],
+    ["1","1","1"]]))
 
-# print(numIslands([
-#     ["1","0","1","1","1"],
-#     ["1","0","1","0","1"],
-#     ["1","1","1","0","1"]]))
+print(numIslands([
+    ["1","0","1","1","1"],
+    ["1","0","1","0","1"],
+    ["1","1","1","0","1"]]))
 
+# (0,6)(4,2)(4,7)
 print(numIslands([
     ["1","1","1","1","1","0","1","1","1","1"],
     ["1","0","1","0","1","1","1","1","1","1"],
