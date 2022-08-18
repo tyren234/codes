@@ -6,14 +6,13 @@ def numIslands(grid: 'list[list[str]]') -> int:
     islands = 0
 
     def dfs(r,c):
-        if (r,c) not in visited and r < rows and c < cols:
-            if grid[r][c] == "1":
-                visited.add((r,c))
+        if (r,c) not in visited and 0 <= r < rows and 0 <= c < cols and grid[r][c] == "1":
+            visited.add((r,c))
 
-                dfs(r+1,c)
-                dfs(r-1,c)
-                dfs(r,c+1)
-                dfs(r,c-1)
+            dfs(r+1,c)
+            dfs(r-1,c)
+            dfs(r,c+1)
+            dfs(r,c-1)
         return
 
 
