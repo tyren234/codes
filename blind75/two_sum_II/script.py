@@ -8,4 +8,4 @@ def two_sum_II (arr : list[int], target : int) -> tuple:
         else: l += 1
     return -1
 
-# print(two_sum_II([1,3,4,5,7,11],9))
+print(two_sum_II([1,3,4,5,7,11],9))
