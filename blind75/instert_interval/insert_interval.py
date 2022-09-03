@@ -9,12 +9,22 @@ def insert(intervals : 'list[list[int]]', newInterval : 'list[int]') -> 'list[li
         result.append(intervals)
         return result
     else:
-        i = len(intervals) - 1
-        while i >= 0:
-            if intervals[i][1] < newInterval[0]:
-                # wstawianie po prawej itego interwalu
-                new = []
-                
-            i -= 1
+        for n,i in enumerate(intervals):
+            if  i[0] <= newInterval[1] and i[1] >= newInterval[0]: #intervals overlapse
+                    newInterval = [min(i[0], newInterval[0]), max(i[1], newInterval[1])]
+                    result = intervals[:n]
+                    print(result)
+                    result.append(newInterval)
+                    print(result)
+                    if n != len(intervals):
+                        result.extend(intervals[n+1:])
+                        print(result)
+                    print()
+    return result
+                    
 
-print(insert([[1,3],[6,9]], [-1,0]))
+
+ # 7 - 8
+ # 1 - 3, 4 - 5, 9 - 10, 14 - 16
+
+print(insert([[1,3],[6,9]],[2,7]))
