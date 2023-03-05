@@ -1,1 +1,0 @@
-C++ basics notes are on my old and trusted discord server
