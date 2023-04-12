@@ -1,0 +1,11 @@
+# ninja log v5
+4	1301	7030224493011902	CMakeFiles/chainOfCommand.dir/main.cpp.obj	44de3a119fa92705
+1302	1649	7030224496512544	chainOfCommand.exe	d02178b8922f7ebc
+5	1246	7030231251860718	CMakeFiles/chainOfCommand.dir/main.cpp.obj	44de3a119fa92705
+1246	1578	7030231255191805	chainOfCommand.exe	d02178b8922f7ebc
+5	1123	7030231331120057	CMakeFiles/chainOfCommand.dir/main.cpp.obj	44de3a119fa92705
+1124	1498	7030231334850270	chainOfCommand.exe	d02178b8922f7ebc
+4	1335	7030231695563059	CMakeFiles/chainOfCommand.dir/main.cpp.obj	44de3a119fa92705
+1335	1647	7030231698640054	chainOfCommand.exe	d02178b8922f7ebc
+4	1540	7030238443031222	CMakeFiles/chainOfCommand.dir/main.cpp.obj	44de3a119fa92705
+1541	1884	7030238446462042	chainOfCommand.exe	d02178b8922f7ebc
