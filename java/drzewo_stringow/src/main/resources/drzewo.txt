@@ -1,0 +1,9 @@
+A
+B L
+C R
+D LL
+C LR
+D RL
+A RR
+B LRL
+C LRR
